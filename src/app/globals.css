@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  /* surfaces */
+  --color-surface: #fbf9f4;
+  --color-surface-dim: #dbdad5;
+  --color-surface-bright: #fbf9f4;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f3ee;
+  --color-surface-container: #f0eee9;
+  --color-surface-container-high: #eae8e3;
+  --color-surface-container-highest: #e4e2dd;
+  --color-surface-variant: #e4e2dd;
+  --color-background: #fbf9f4;
+  /* ink */
+  --color-on-surface: #1b1c19;
+  --color-on-surface-variant: #46464b;
+  --color-on-background: #1b1c19;
+  --color-inverse-surface: #30312e;
+  --color-inverse-on-surface: #f2f1ec;
+  --color-outline: #77767c;
+  --color-outline-variant: #c7c6cc;
+  --color-surface-tint: #5c5e68;
+  /* primary / gold */
+  --color-primary: #000000;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #191b23;
+  --color-on-primary-container: #82838e;
+  --color-inverse-primary: #c5c6d1;
+  --color-secondary: #725b24;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fcdc98;
+  --color-on-secondary-container: #775f28;
+  --color-secondary-fixed: #ffdf9b;
+  --color-secondary-fixed-dim: #e2c381;
+  --color-on-secondary-fixed: #251a00;
+  --color-on-secondary-fixed-variant: #59440e;
+  /* editorial */
+  --color-gold: #c5a869;
+  --color-gold-deep: #9e7e38;
+  --color-hairline: #e6e2d8;
+
+  /* typography */
+  --font-display: var(--font-eb-garamond);
+  --font-sans: var(--font-jakarta);
+
+  /* spacing tokens from DESIGN.md */
+  --spacing-gutter: 2rem;
+  --spacing-margin: 3rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 2rem;
+  --spacing-space-xl: 3.5rem;
+}
+
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--color-surface);
+    color: var(--color-on-surface);
+  }
+  body { overscroll-behavior: none; }
+  ::-webkit-scrollbar { display: none; }
+  * { scrollbar-width: none; }
+}
+
+/* stitch-accurate utilities */
+.text-headline-display { font-family: var(--font-eb-garamond); font-size: 56px; line-height: 68px; letter-spacing: 0.02em; font-weight: 400; }
+.text-headline-display-mobile { font-family: var(--font-eb-garamond); font-size: 38px; line-height: 48px; letter-spacing: 0.01em; font-weight: 400; }
+.text-headline-lg { font-family: var(--font-eb-garamond); font-size: 36px; line-height: 46px; letter-spacing: 0.02em; font-weight: 400; }
+.text-headline-lg-mobile { font-family: var(--font-eb-garamond); font-size: 28px; line-height: 36px; letter-spacing: 0.01em; font-weight: 400; }
+.text-headline-md { font-family: var(--font-eb-garamond); font-size: 24px; line-height: 32px; letter-spacing: 0.01em; font-weight: 500; }
+.text-body-lg { font-family: var(--font-eb-garamond); font-size: 20px; line-height: 32px; letter-spacing: 0.01em; font-weight: 400; }
+.text-body-md { font-family: var(--font-eb-garamond); font-size: 17px; line-height: 28px; font-weight: 400; }
+.text-body-sm { font-family: var(--font-eb-garamond); font-size: 15px; line-height: 24px; font-weight: 400; }
+.text-label-lg { font-family: var(--font-jakarta); font-size: 13px; line-height: 18px; letter-spacing: 0.08em; font-weight: 500; }
+.text-label-md { font-family: var(--font-jakarta); font-size: 11px; line-height: 16px; letter-spacing: 0.1em; font-weight: 500; }
+.text-label-sm { font-family: var(--font-jakarta); font-size: 10px; line-height: 14px; letter-spacing: 0.12em; font-weight: 600; }
+
+/* safe areas */
+.pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+.pt-safe { padding-top: env(safe-area-inset-top, 0px); }
