@@ -9,7 +9,7 @@ export function Header() {
   const pathname = usePathname();
   const { lang, setLang } = useLang();
   const isDetail = pathname?.startsWith("/nama/");
-  const isIndex = pathname === "/index" || pathname === "/manuscript";
+  const isIndex = pathname === "/manuscript";
 
   // Detail reading sanctuary — Stitch-faithful: back arrow + Daftar Folio/Folio Index, no brand lockup
   if (isDetail) {
@@ -18,14 +18,14 @@ export function Header() {
         <div className="mx-auto flex h-14 max-w-[1120px] items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-1">
             <Link
-              href="/index"
+              href="/manuscript"
               aria-label="Back to index"
               className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"
             >
               <Icon name="arrow_back" size={20} />
             </Link>
             <Link
-              href="/index"
+              href="/manuscript"
               className="font-sans text-[11px] font-medium uppercase tracking-[0.12em] text-on-surface-variant hover:text-on-surface transition-colors"
             >
               {lang === "id" ? "Daftar Folio" : "Folio Index"}
@@ -105,7 +105,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           {!isIndex && (
             <Link
-              href="/index"
+              href="/manuscript"
               className="hidden sm:inline-flex min-h-[44px] items-center rounded-full border border-hairline bg-surface-container-low px-4 font-sans text-[11px] font-semibold uppercase tracking-[0.08em] text-on-surface-variant hover:bg-surface-container transition-colors"
             >
               {t(lang, "nav.index")}

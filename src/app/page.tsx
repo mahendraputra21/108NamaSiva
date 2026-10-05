@@ -66,7 +66,7 @@ export default function LandingPage() {
               {t(lang, "landing.cta.primary")} <span aria-hidden>→</span>
             </Link>
             <Link
-              href="/index"
+              href="/manuscript"
               className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-surface-container px-6 font-sans text-[12px] font-semibold uppercase tracking-[0.14em] text-on-surface shadow-sm transition-colors hover:bg-surface-container-high active:scale-[0.98]"
             >
               <span aria-hidden className="text-secondary">◈</span> {t(lang, "landing.cta.secondary")}

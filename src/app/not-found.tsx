@@ -16,7 +16,7 @@ export default function NotFound() {
         <div className="font-display text-[48px] leading-none text-gold-deep">ॐ</div>
         <h1 className="mt-4 font-display text-[24px] font-medium text-on-surface">{t(lang, "notfound.title")}</h1>
         <p className="mt-2 max-w-[32rem] font-display text-[15px] italic leading-6 text-on-surface-variant">{t(lang, "notfound.body")}</p>
-        <Link href="/index" className="mt-6 inline-flex min-h-[44px] items-center rounded-full bg-inverse-surface px-6 font-sans text-[12px] font-semibold uppercase tracking-[0.12em] text-inverse-on-surface hover:bg-black">
+        <Link href="/manuscript" className="mt-6 inline-flex min-h-[44px] items-center rounded-full bg-inverse-surface px-6 font-sans text-[12px] font-semibold uppercase tracking-[0.12em] text-inverse-on-surface hover:bg-black">
           {t(lang, "notfound.cta")}
         </Link>
       </main>

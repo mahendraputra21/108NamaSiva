@@ -35,7 +35,7 @@ export function FolioNav({ number }: { number: number }) {
       </Link>
 
       <Link
-        href="/index"
+        href="/manuscript"
         aria-label="Open index"
         className="inline-flex min-h-[48px] shrink-0 flex-col items-center justify-center rounded-lg bg-surface-container px-3 py-2 text-center transition-colors hover:bg-surface-container-high active:scale-[0.97]"
       >
